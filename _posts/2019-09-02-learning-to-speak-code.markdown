@@ -75,7 +75,7 @@ Navigate the help webviews using the above commands. To dismiss a webview, say (
 # Words and Phrases
 Spelling every word using the alphabet would not be very efficient. Some users switch to `dragon mode` and use dragon directly, but I most often use a set of commands in my Talon library that allow me capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
 
-"phrase <dgndictation> [over]"
+"phrase \<dgndictation> [over]"
  : "phrase hello world" => `hello world`
  : "phrase hello world phrase hello world" => `hello worldhello world`
 
@@ -83,10 +83,10 @@ Spelling every word using the alphabet would not be very efficient. Some users s
  : "say hello world"  => `hello world`
  : "say hello world say hello world"  => `hello world say hello world`
 
-"sentence <dgndictation> [over]"
+"sentence \<dgndictation> [over]"
  : "sentence hello world" => `Hello world`
 
-"word <dgnwords>"
+"word \<dgnwords>"
  : "word hello" => `hello`
 
 
