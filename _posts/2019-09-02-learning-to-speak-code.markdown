@@ -102,11 +102,11 @@ Practice outputting some text. Keep notes on which words or phrases don't work a
 When writing code, words often need to be formatted, e.g. snake_case, camelCase, etc. It's handy to have a set of text formatting commands which will capture a string of words then format the output.
 
 
-"dunder"
- : __hello__
+dunder
+ : "dunder hello" => `__hello__`
 
-"camel"
- : helloWorld
+camel
+ : "camel hello world" => `helloWorld`
 
 "snake"
  : hello_word
