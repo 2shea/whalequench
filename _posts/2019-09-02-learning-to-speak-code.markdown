@@ -128,6 +128,9 @@ Once you are feeling confident enough with copying code, try tackling simple tas
 ## Use Your Talon Library as Dogfood
 Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning.
 
+## Did I Mention Talon Slack?
+Talon's Slack community can be a really great resource. If you have questions or are thinking about building a new tool, jump into Slack and say Hi! There's a good chance someone has already written the thing you need, or we can help answer questions when you get stuck.
+
 [^1]: This post assumes that you already have a working voice set up and that you are using [Talon](https://talonvoice.com/) and Dragon Dictation. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
 
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
