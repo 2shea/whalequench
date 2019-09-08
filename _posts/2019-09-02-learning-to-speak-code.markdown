@@ -79,7 +79,7 @@ Spelling every word using the alphabet would not be very efficient. Some users s
  : "phrase hello world" => `hello world`
  : "phrase hello world phrase hello world" => `hello worldhello world`
 
-"(say | speak) <dgndictation>++ [over]"
+"(say | speak) \<dgndictation>++ [over]"
  : "say hello world"  => `hello world`
  : "say hello world say hello world"  => `hello world say hello world`
 
