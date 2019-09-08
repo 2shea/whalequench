@@ -39,7 +39,7 @@ Get comfortable with the commands for symbols. Most can be easily mapped to some
 Arrow keys are important for basic navigation and keyboard shortcuts. They are used frequently enough that the commands should be simple, but bare "up", "down", etc. are likely to get accidentally triggered often. I recommend adding a prefix, for example "go up", "go down", "go left", etc. If you have the Talon Community repository, these will already be prefixed with "go".
 
 ### Modifiers
-Most modifiers can be reference using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, many voice coders use "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts. At this point, you can do almost anything a keyboard can do, but probably not as efficient just yet.
+Most modifiers can be referenced using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, many voice coders use "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts. At this point, you can do almost anything a keyboard can do, but probably not as efficient just yet.
 
 ***
 
@@ -54,7 +54,7 @@ Voice coding requires learning a library of commands to be efficient (typing eve
 I built some command help webviews which can be accessed using voice commands. What you say will appear on the left, output on the right.
 
 ### "help context"
-This webview will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., sublime text only active when sublime is in focus). From here, you can say "help 1" (or click with the mouse) to show commands for that specific context.
+This webview will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context only active when sublime is in focus). From here, you can say "help 1" (or click with the mouse) to show commands for that specific context.
 
 ![help context](/assets/help_context.png)
 
@@ -147,7 +147,7 @@ Formatters can be combined:
  : "HELLOWORLD"
 
 # General Tips
-## Start by Coping Code
+## Start by Copying Code
 Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets of code from my codebase that were a good representation of the code I work on, and tried to reproduced exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my talon libraries and learn new commands.
 
 ## Use Simple Tasks for More Practice
