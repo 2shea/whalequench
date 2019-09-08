@@ -148,7 +148,7 @@ Formatters can be combined:
 
 # General Tips
 ## Start by Copying Code
-Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets of code from my codebase that were a good representation of the code I work on, and tried to reproduced exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my Talon libraries and learn new commands.
+Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets from my codebase that were a good representation of what I work on, and tried to reproduced exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my Talon libraries and learn new commands.
 
 ## Use Simple Tasks for More Practice
 Once you are feeling confident enough with copying code, try tackling simple tasks. The first few weeks of learning, my team was really supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
