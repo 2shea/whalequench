@@ -6,13 +6,9 @@ categories: blog
 tags: talon
 author: Emily Shea
 ---
-So you've decided to try using speech recognition to write code. You've installed all the things and it's time to start talking to your computer, but where to start? Learning a new keyboard layout can be daunting, so an even more extreme change to using speech can be very intimidating, or even seem impossible. If you are looking to use voice and feeling like "OMG HOW DO I EVEN", I've compiled some learning strategies and tips to help you get started.
+So you've decided to try using speech recognition to write code. You've installed all the things[^1] and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
 
-_All functionality described in this post came from either [my Talon libraries] or [Talon Community repository]. The voice commands are not part of Talon, but use Talon's API, so any of them can be customized or extended._
-
-_This post assumes that you already have a working voice set up and that you are using [Talon](https://talonvoice.com/) and Dragon Dictation. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out this video house9Tube put together._
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oB5TGMEhQp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+_All functionality described in this post came from either [my Talon libraries] or [Talon Community repository]. The voice commands are not part of Talon, but use Talon's API, so any of them can be customized or extended. Talon is under rapid development, so the examples may change._
 
 # Start with the Basics
 
@@ -73,22 +69,21 @@ Navigate the help webviews using the above commands. To dismiss a webview, say (
 ***
 
 # Words and Phrases
-Spelling every word using the alphabet would not be very efficient. Some users switch to `dragon mode` and use dragon directly, but I most often use a set of commands in my Talon library that allow me capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
+Spelling every word using the alphabet would not be very efficient. Some users switch to `dragon mode` and use Dragon directly, but I most often use a set of commands in my Talon library that allow me to capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
 
-"phrase \<dgndictation> [over]"
- : "phrase hello world" => `hello world`
- : "phrase hello world phrase hello world" => `hello worldhello world`
+phrase \<dgndictation> [over]
+ : "phrase hello world" &rarr; `hello world`
+ : "phrase hello world phrase hello world" &rarr; `hello worldhello world`
 
-"(say | speak) \<dgndictation>++ [over]"
- : "say hello world"  => `hello world`
- : "say hello world say hello world"  => `hello world say hello world`
+(say | speak) \<dgndictation>++ [over]
+ : "say hello world"  &rarr; `hello world`
+ : "say hello world say hello world"  &rarr; `hello world say hello world`
 
-"sentence \<dgndictation> [over]"
- : "sentence hello world" => `Hello world`
+sentence \<dgndictation> [over]
+ : "sentence hello world" &rarr; `Hello world`
 
-"word \<dgnwords>"
- : "word hello" => `hello`
-
+word \<dgnwords>
+ : "word hello" &rarr; `hello`
 
 ***
 
@@ -102,59 +97,38 @@ Practice outputting some text. Keep notes on which words or phrases don't work a
 When writing code, words often need to be formatted, e.g. snake_case, camelCase, etc. It's handy to have a set of text formatting commands which will capture a string of words then format the output.
 
 
-dunder
- : "dunder hello" => `__hello__`
+(dunder | camel | snake | kebab | pack | title | allcaps | dubstring | string)+ \<dgndictation> [over]
+ : "dunder hello" &rarr; `__hello__`
+ : "camel hello world" &rarr; `helloWorld`
+ : "snake hello world" &rarr; `hello_word`
+ : "smash hello world" &rarr; `helloworld`
+ : "kebab hello world" &rarr; `hello-world`
+ : "pack hello world" &rarr; `hello::world`
+ : "title hello world" &rarr; `Hello World`
+ : "allcaps hello world" &rarr; `HELLO WORLD`
+ : "dubstring hello world" &rarr; `"hello world"`
+ : "string hello world" &rarr; `'hello world'`
+ : "kebab title hello world" &rarr; `Hello-World`
+ : "pack title hello world" &rarr; `Hello::World`
+ : "allcaps smash hello world" &rarr; `HELLOWORLD`
+ : "allcaps smash dubstring hello world" &rarr; `"HELLOWORLD"`
 
-camel
- : "camel hello world" => `helloWorld`
-
-"snake"
- : hello_word
-
-"smash"
- : helloworld
-
-"kebab"
- : hello-world
-
-"pack"
- : hello::world
-
-"title"
- : Hello World
-
-"allcaps"
- : HELLO WORLD
-
-"dubstring"
- : "hello world"
-
-"string"
- : 'hello world'
-
-Formatters can be combined:
-
-"kebab title"
- : Hello-World
-
-"pack title"
- : Hello::World
-
-"allcaps smash"
- : HELLOWORLD
-
-"allcaps smash dubstring"
- : "HELLOWORLD"
+As you can see by the last few examples, formatters can be combined.
 
 # General Tips
-## Start by Copying Code
+## Find a Quiet Space
+Talking to your computer can feel awkward at first, and you might be self-conscious as you get used to hearing your own voice as you work. Find a quiet space where you feel comfortable talking at a normal volume and not be distracted by what other people think. Also, it's important that background noise will be at a minimum so it doesn't interfere with your accuracy.
+
+## Copy Some Code
 Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets from my codebase that were a good representation of what I work on, and tried to reproduced exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my Talon libraries and learn new commands.
 
 ## Use Simple Tasks for More Practice
 Once you are feeling confident enough with copying code, try tackling simple tasks. The first few weeks of learning, my team was really supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
 
-# Switching Applications
+## Use Your Talon Library as Dogfood
+Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning.
 
+[^1]: This post assumes that you already have a working voice set up and that you are using [Talon](https://talonvoice.com/) and Dragon Dictation. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
 
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
 [Talon Community repository]: https://github.com/dwiel/talon_community
