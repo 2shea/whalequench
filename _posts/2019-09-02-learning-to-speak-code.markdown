@@ -1,19 +1,21 @@
 ---
-flayout: post
+layout: single
 title:  "Learning to Speak Code"
 date:   2019-09-02 17:36:34 -0700
 categories: blog
 tags: talon
-author: Emily Shea
----
-So you've decided to try using speech recognition to write code. You've installed all the things[^1] and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
+toc: true
+excerpt: "A unique line of text to describe this post that will display in an archive listing and meta description with SEO benefits."
 
-_All functionality described in this post came from either [my Talon libraries] or [Talon Community repository]. The voice commands are not part of Talon, but use Talon's API, so any of them can be customized or extended. Talon is under rapid development, so the examples may change._
+---
+You've decided to try using speech recognition to write code. You've installed all the things[^1] and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
+
+_All functionality described in this post came from either [my Talon libraries] or [Talon Community repository]. The voice commands are not part of Talon, but use Talon's API, so everything is customizable. Talon is under rapid development, so the examples may change._
 
 # Start with the Basics
 
 ### Learning The Alphabet
-Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and they will be used all the time (spelling, keyboard shortcuts, vim, etc.) so it's important to be able to recall them quickly. The alphabet is a set of words where each word is a command for a letter key. The alphabet can be customized, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
+Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and they will be used all the time (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
 
 > air bat cap dip each far gone harp sit jury crunch look mad near odd pit quench red sun trap urge vest whale plex yank zip
 
