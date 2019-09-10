@@ -5,7 +5,7 @@ date:   2019-09-02 17:36:34 -0700
 categories: blog
 tags: talon
 toc: true
-excerpt: "A unique line of text to describe this post that will display in an archive listing and meta description with SEO benefits."
+excerpt: "A beginner's guide to learning voice coding with Talon."
 
 ---
 You've decided to try using speech recognition to write code. You've installed all the things[^1] and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.

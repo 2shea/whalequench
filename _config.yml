@@ -24,10 +24,11 @@ repository: 2shea/whalequench
 twitter_username: yomilly
 github_username:  2shea
 logo: '/assets/whale_quench_oblong.png'
+paginate: 5
 
 author:
   name: "Emily Shea"
-  avatar: ""
+  avatar: "/assets/headshot.jpg"
   bio: ""
   location : "Somewhere talking to a computer"
   links:
