@@ -31,8 +31,9 @@ Learning the alphabet is a great place to start. It's a bite-size set of command
 
 Newcomers to voice coding often ask why not use the NATO Phonetic Alphabet (Alpha, Bravo, …)? Many of the NATO words are multiple syllables (e.g., November) and are not as efficient, which is important because the alphabet commands will be used all the time. _If you have questions about international language support, join [Talon Slack][]._
 
-> **Go Practice!**
+**Go Practice!**
 Spell some words using the alphabet. Spending some time upfront to get efficient recall will pay off. Most of the other voice commands are easy enough to learn as you go, or reference when you need them, but the alphabet is essential.
+{: .notice}
 
 ## Numbers
 Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py).
@@ -54,14 +55,15 @@ Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic
 {: .notice--warning}
 Most modifiers can be referenced using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, many voice coders use "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts. At this point, you can do almost anything a keyboard can do, but probably not as efficient just yet.
 
-> **Go Practice!**
+**Go Practice!**
 Try your favorite keyboard shortcuts by combining the alphabet with the modifier keys.
-> Some examples:
-> "go right", "go left", "go up", "go down"
-> "whale odd whale"
-> "delete"
-> "ship whale"
-> "command air"
+Some examples:
+"go right", "go left", "go up", "go down"
+"whale odd whale"
+"delete"
+"ship whale"
+"command air"
+{: .notice}
 
 # Command Help
 Example from [help.py](https://github.com/2shea/talon_configs/blob/master/help.py).
@@ -87,6 +89,7 @@ I also have a "help alphabet" pop-up, which is pretty straightforward (shows the
 
 > **Go Practice!**
 Navigate the help pop-ups using the above commands. To dismiss a pop-up, say (or click) "cancel".
+{: notice}
 
 # Words and Phrases
 Example from [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py).
@@ -110,6 +113,7 @@ word \<dgnwords>
 
 > **Go Practice!**
 Practice outputting some text. Keep notes on which words or phrases don't work as expected so you can tune later.
+{: notice}
 
 
 # Formatters
@@ -140,7 +144,7 @@ The built-in microphone on your mac is not going to give you the kind of accurac
 
 1. [Blue Yeti](https://smile.amazon.com/Blue-Yeti-USB-Microphone-Silver/dp/B002VA464S?sa-no-redirect=1) - great mic (especially for the price) if you don't have background noise
 1. [Stenomask](https://talktech.com/product/steno-sr-pro-1/) - great for dealing with background noise, cheapest model probably also fine
-1. [DPA d:fine cardioid](https://www.sweetwater.com/store/detail/4288ESBg--dpa-dfine-core-4288-omnidirectional-flex-earset-microphone-with-microdot-connector-long-length-be) - the most highly recommended microphone, but pricey and probably not necessary when starting
+1. [DPA d:fine cardioid](https://www.sweetwater.com/store/detail/4288ESBg--dpa-dfine-core-4288-omnidirectional-flex-earset-microphone-with-microdot-connector-long-length-be) - the best, but expensive
 
 
 ## Find a Quiet Space
