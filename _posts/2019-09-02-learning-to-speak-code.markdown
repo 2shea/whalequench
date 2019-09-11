@@ -8,16 +8,15 @@ toc: true
 excerpt: "A beginner's guide to learning voice coding with Talon."
 
 ---
-You've decided to try using speech recognition to write code. You've installed all the things and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
+You've decided to try using speech recognition to write code. You've installed all the things, you've got a decent microphone, and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
 
 <div class="notice--info">This post assumes that you already have a working voice set up and that you are using [Talon](https://talonvoice.com/) and Dragon Dictation. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
 </div>
 
 _All functionality described in this post came from either [my Talon libraries] or [Talon Community repository]. The voice commands are not part of Talon, but use Talon's API, so everything is customizable. Talon is under rapid development, so the examples may change._
 
-# Start with the Basics
-
-## Learning The Alphabet
+# Basic Input
+## The Alphabet
 Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and they will be used all the time (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
 
 > air bat cap dip each far gone harp sit jury crunch look mad near odd pit quench red sun trap urge vest whale plex yank zip
@@ -33,7 +32,7 @@ Numbers should be easy: "one" for 1, "two" for 2, etc. For multiple digits, chai
 ## Symbols
 Get comfortable with the commands for symbols. Most can be easily mapped to something easily remembered, e.g., "dollar" for $, "percent" for %. 
 
-## Arrows
+## Arrow Keys
 Arrow keys are important for basic navigation and keyboard shortcuts. They are used frequently enough that the commands should be simple, but bare "up", "down", etc. are likely to get accidentally triggered often. I recommend adding a prefix, for example "go up", "go down", "go left", etc. If you have the Talon Community repository, these will already be prefixed with "go".
 
 ## Modifiers
@@ -45,10 +44,10 @@ Try your favorite keyboard shortcuts by combining the alphabet with the modifier
 # Command Help
 Voice coding requires learning a library of commands to be efficient (typing everything out by individual key would be very slow). It isn't realistic to think that you will memorize all of the commands, especially if you are iterating on your commands all the time like I do. Because context switching is pretty taxing, it is important to be able to reference the set of available commands quickly and easily to maintain "the flow" of coding and have a good quality of work life.
 
-I built some command help webviews which can be accessed using voice commands. What you say will appear on the left, output on the right.
+I built some command help pop-ups which can be accessed using voice commands. What you say will appear on the left, output on the right.
 
 ## "help context"
-This webview will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context only active when sublime is in focus). From here, you can say "help 1" (or click with the mouse) to show commands for that specific context.
+This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context only active when sublime is in focus). From here, you can say "help 1" (or click with the mouse) to show commands for that specific context.
 
 ![help context](/assets/help_context.png)
 
@@ -57,10 +56,10 @@ This view shows commands for a given context. It can be accessed either via "hel
 
 ![help sublime](/assets/help_sublime.png)
 
-I also have a "help alphabet" webview, which is pretty straightforward (shows the alphabet). You can find the code for these webviews in the [Talon Community repository] or [my Talon help.py].
+I also have a "help alphabet" pop-up, which is pretty straightforward (shows the alphabet). You can find the code for these pop-ups in the [Talon Community repository] or [my Talon help.py].
 
 > **Go Practice!**
-Navigate the help webviews using the above commands. To dismiss a webview, say (or click) "cancel".
+Navigate the help pop-ups using the above commands. To dismiss a pop-up, say (or click) "cancel".
 
 # Words and Phrases
 Spelling every word using the alphabet would not be very efficient. Some users switch to `dragon mode` and use Dragon directly, but I most often use a set of commands in my Talon library that allow me to capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
