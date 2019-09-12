@@ -49,7 +49,7 @@ defaults:
 
 footer:
   links:
-    - label: "Credit: logo artist @elisabethnicula"
+    - label: "Artist Credit: @elisabethnicula"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/elisabethnicula"
 
