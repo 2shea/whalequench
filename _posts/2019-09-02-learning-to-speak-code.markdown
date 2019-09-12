@@ -8,52 +8,135 @@ toc: true
 excerpt: "A beginner's guide to learning voice coding with Talon."
 
 ---
-You've decided to try using speech recognition to write code. You've installed all the things, you've got a decent microphone, and it's time to start talking to your computer, but where do you start? If you are feeling like "OMG HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
+You've decided to try using speech recognition to write code. You've installed all the things, you've got a decent microphone, and it's time to start talking to your computer, but where do you start? If you are feeling like "HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
 
-This post assumes that you already have a working voice set up and that you are using [Talon](https://talonvoice.com/) and Dragon Dictation. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
+This post assumes that you already have a working voice set up with both [Talon](https://talonvoice.com/) and Dragon Dictation installed and either [my Talon Configs][] or [Talon Community repository][] cloned into `~/.talon/user`. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
 {: .notice--info}
 
-_Talon is under rapid development, so the examples may change._
+_Talon is under rapid development, so these examples may change._
 {: .notice--danger}
 
-When starting to work with Talon, it's important to remember that Talon is the API that allows building hands-free functionality using python. All of the examples you will see in this post are implemented using Talon's API; they do not come with Talon by default. You can find all the code for the examples in this post either in [my Talon Libraries] or [Talon Community Repository]. Saving them to your `~/.talon/user` will load them into Talon and they will be ready to use. Because all of the functionality lives in a collection of python files, everything is highly customizable to your workflow and preferences. Learning to voice code will be about learning to use functionality already implemented by others, but also making customizations as you need.
+When starting to work with Talon, it's important to remember that Talon is the API ([what is an API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f)) that allows building hands-free functionality using python. All the examples you will see in this post are implemented using Talon's API; they do not come with Talon by default. You can find all the code for the examples in this post either in [my Talon Configs] or [Talon Community Repository]. Saving them to your `~/.talon/user` will load them into Talon and they will be automatically ready to use. Because all the functionality lives in a collection of python files, everything is highly customizable to your workflow and preferences. Learning to voice code will be about learning to use functionality already implemented by others while making customizations to fit your unique workflow.
+
+When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice commands will be defined inside of a dictionary passed into the 'keymap' function on the context, like this:
+
+```
+from talon.voice import Context
+context = Context("example")
+context.keymap({
+	# saying "give me a string" will output "string"
+	"give me a string": "string",
+
+	# press keys using Key
+	"select all": Key("cmd-air"),
+	"select all": Key("cmd air"), # equivalent
+
+	# alternative commands in () for either "select all" or "cell all"
+	"(select | cell) all": Key("cmd-air"),
+	})
+
+	# optional commands in [] for either "select all" or "all"
+	"[select] all": Key("cmd-air"),
+
+	# output can be an array, e.g. will output () with cursor inside
+	"args": ["()", Key("left")]
+})
+```
 
 
 # Basic Input
 ## The Alphabet
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py).
+Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 
+Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and you will use them constantly (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a single letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
 
-Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and they will be used all the time (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
+![alphabet commands](/assets/alphabet.png)
 
-> air bat cap dip each far gone harp sit jury crunch look mad near odd pit quench red sun trap urge vest whale plex yank zip
+Newcomers to voice coding often ask why not use the NATO Phonetic Alphabet:
 
-Newcomers to voice coding often ask why not use the NATO Phonetic Alphabet (Alpha, Bravo, …)? Many of the NATO words are multiple syllables (e.g., November) and are not as efficient, which is important because the alphabet commands will be used all the time. _If you have questions about international language support, join [Talon Slack][]._
+![NATO alphabet](/assets/NATO.png)
+
+With one exception, all the NATO words have more than one syllable (e.g., November has three) and are not efficient for commands like the alphabet that you will use frequently. _If you have questions about international language support, join [Talon Slack][]._
 
 **Go Practice!**
-Spell some words using the alphabet. Spending some time upfront to get efficient recall will pay off. Most of the other voice commands are easy enough to learn as you go, or reference when you need them, but the alphabet is essential.
+Spell some words using the alphabet. Spending some time upfront developing efficient recall will pay off. Most of the other voice commands are easy enough to learn as you go, or reference when you need them, but the alphabet is essential.
 {: .notice}
 
 ## Numbers
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py).
+Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
-Numbers should be easy: "one" for 1, "two" for 2, etc. For multiple digits, chain them, e.g., "one two five" for 125.
+Numbers should be easy: "one" for 1, "two" for 2, etc. For more than one digit, chain them, e.g., "one two five" for 125.
 
 ## Symbols
-Example from [symbols.py](https://github.com/2shea/talon_configs/blob/master/symbols.py).
-{: .notice--warning}
-Get comfortable with the commands for symbols. Most can be easily mapped to something easily remembered, e.g., "dollar" for $, "percent" for %. 
+Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/symbols.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/text/symbol.py)).
+
+Some basic symbols:
+```
+"question [mark]": "?",
+"tilde": "~",
+"(bang | exclamation point)": "!",
+"dollar [sign]": "$",
+"(downscore | underscore)": "_",
+"colon": ":",
+"(paren | left paren)": "(",
+"(rparen | are paren | right paren)": ")",
+"(bracket | brack | left bracket)": "{",
+"(rbrack | are bracket | right bracket)": "}",
+"(angle | left angle | less than)": "<",
+"(rangle | are angle | right angle | greater than)": ">",
+"(star | asterisk)": "*",
+"(pound | hash [sign] | octo | thorpe | number sign)": "#",
+"percent [sign]": "%",
+"caret": "^",
+"at sign": "@",
+"(and sign | ampersand )": "&",
+"pipe": "|",
+```
+
+Some optimizated commands with multiple symbols:
+```
+"arrow": "->",
+"dub arrow": "=>",
+"op dub": " => ",
+"(op | is) equal": " == ",
+"(op | is) not equal": " != ",
+"(op | is) greater [than] or equal": " >= ",
+"(op | is) less [than] or equal": " <= ",
+```
+
+**Go Practice!**
+Get familiar with the commands for symbols. With most mapped to an easily remembered command, e.g., "dollar" for $, "percent" for %, this shouldn't require much effort.
+{: .notice}
 
 ## Arrow Keys
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py).
+Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
-Arrow keys are important for basic navigation and keyboard shortcuts. They are used frequently enough that the commands should be simple, but bare "up", "down", etc. are likely to get accidentally triggered often. I recommend adding a prefix, for example "go up", "go down", "go left", etc. If you have the Talon Community repository, these will already be prefixed with "go".
+Arrow keys are important for basic navigation and keyboard shortcuts. You will use them frequently enough that the commands should be simple, but bare "up", "down", etc. will be unintentionally triggered often. I recommend using a prefix, for example "go up", "go down", "go left", etc. If you cloned the [my Talon Configs][] or the [Talon Community repository][], these already have the prefix "go".
 
 ## Modifiers
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py).
+Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
-Most modifiers can be referenced using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, many voice coders use "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts. At this point, you can do almost anything a keyboard can do, but probably not as efficient just yet.
+You can reference most modifiers using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, I recommend an alternative like "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts.
+
+At this point, you should be able to hit all the common keys on the keyboard and have access to significant functionality on your computer using these keys and keyboard shortcuts. A majority of the commands I have in my Talon libraries are just easier to remember shorthands for using keyboard shortcuts. It's worth spending time familiarizing yourself with available keyboard shortcuts in your favorite applications and later making voice commands where it improves your workflow.
+
+**A few examples of voice commands for keyboard shortcuts:88
+From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py)
+```
+"save": Key("cmd-s"),
+"copy": Key("cmd-c"),
+"cut": Key("cmd-x"),
+"menu help": Key("cmd-shift-?")
+```
+
+From [generic_editor.py](https://github.com/2shea/talon_configs/blob/master/generic_editor.py)
+```
+"push": Key("cmd-right"),
+"pop": Key("cmd-left"),
+"step": Key("alt-right"),
+"stone": Key("alt-left"),
+```
 
 **Go Practice!**
 Try your favorite keyboard shortcuts by combining the alphabet with the modifier keys.
@@ -63,19 +146,43 @@ Some examples:
 "delete"
 "ship whale"
 "command air"
+"one two three"
+"percent dollar bang".
 {: .notice}
+
+## Multipliers
+Example from [help.py](https://github.com/2shea/talon_configs/blob/master/repeater.py).
+It won't take you long to get frustrated if you are repeating yourself constantly. If you need to make an edit requires saying "delete" 20 times, you may give up or reach for a keyboard, so efficient repetition is important. Talon has a `Rep(n)` function that repeats the last command `n` number of times.
+
+Personally, it feels most natural to say the command first and specify how many times as a post-fix ("delete 5 times" vs. "5 times delete"). I often know _what_ I need to do first, and can decide _how many_ as I'm saying the first command. Because many commands might already be long, I want an efficient way to specify repeats. I can't use bare numbers, like "delete 5", because it's ambiguous whether that means "delete once, then the number 5" or "delete 5 times". I could use "once", "twice", "thrice", except it's not common knowlege to know what comes after "thrice", and I may want more than 3 repeats. One way is to make up a bunch of words for the repeats, but that requires inventing and learning a lot of new vocabulary.
+
+My personal solution is to use the [ordinal number words](https://en.wikipedia.org/wiki/Ordinal_numeral). I don't use ordinals very often, and I know the ordinal representation higher than I will possibly need without needing to learn any new vocabulary. This has worked well for me. Some examples:
+
+
+"go down 4th"
+ : arrow down 5 times
+
+"delete 10th"
+ : delete 10 times 
+
+"select down 12th"
+ : select down 12 times
+
 
 # Command Help
 Example from [help.py](https://github.com/2shea/talon_configs/blob/master/help.py).
 {: .notice--warning}
 
-Voice coding requires learning a library of commands to be efficient (typing everything out by individual key would be very slow). It isn't realistic to think that you will memorize all of the commands, especially if you are iterating on your commands all the time like I do. Because context switching is pretty taxing, it is important to be able to reference the set of available commands quickly and easily to maintain "the flow" of coding and have a good quality of work life.
+Voice coding requires learning a library of commands to be efficient (typing everything out by individual key would be very slow). It isn't realistic to think that you will memorize every possible command, especially if you are continuously iterating on your commands like I do. Because context switching is significantly taxing, it is important to be able to reference the set of currently available commands quickly and easily to maintain the "flow" of coding and have a good quality of work life overall. I noticed I significant improvement in my own "flow" after I built some command help pop-ups and no longer needed to open up my text editor to reference my commands. These help pop-ups can be accessed using voice commands. The voice command (what you say) will appear on the left and output on the right.
 
-I built some command help pop-ups which can be accessed using voice commands. What you say will appear on the left, output on the right.
+Voice commands are grouped by context, for example "sublime", "git", "google_chrome", etc. You will find that most Talon modules have one context name, and some have logic to restrict the context's active state based on some logic, like when an application has focus (e.g., "sublime" context active when Sublime Text has focus) or when working within a file with a specific file extension (e.g., "python" context active for .py extension). The help pop-ups described below will show information on the contexts loaded into Talon and the commands for that context group.
+
+The new Talon beta API is structured differently and does not have a concept of contexts.
+{: .notice--danger}
 
 ## All Contexts
 **"help context"**
-This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context only active when sublime is in focus). From here, you can say "help 1" (or click with the mouse) to show commands for that specific context.
+This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context is only active when sublime is in focus). From here, you can say "help 1", "help /<context name>", (or click with the mouse) to show commands for that specific context.
 
 ![help context](/assets/help_context.png)
 
@@ -85,17 +192,20 @@ This view shows commands for a given context. It can be accessed either via "hel
 
 ![help sublime](/assets/help_sublime.png)
 
-I also have a "help alphabet" pop-up, which is pretty straightforward (shows the alphabet). You can find the code for these pop-ups in the [Talon Community repository] or [my Talon help.py].
+## Alphabet
+**"help alphabet"**
+Just in case you forget the alphabet, there is also a "help alphabet" pop-up, which is pretty straightforward in showing the alphabet commands.
 
-> **Go Practice!**
+**Go Practice!**
 Navigate the help pop-ups using the above commands. To dismiss a pop-up, say (or click) "cancel".
-{: notice}
+{: .notice}
 
 # Words and Phrases
 Example from [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py).
-{: .notice--warning}
+{: .notice--warning}  
 
-Spelling every word using the alphabet would not be very efficient. Some users switch to `dragon mode` and use Dragon directly, but I most often use a set of commands in my Talon library that allow me to capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
+## Using Talon Mode
+Spelling every word one letter at a time using the alphabet would not be very efficient. I use a set of commands in my Talon library that allow me to capture full words and phrases. Talon has some syntax `<dgnwords>`, `<dgndictation>`, or the greedy version `<dgndictation>++` which capture text following a command.
 
 phrase \<dgndictation> [over]
  : "phrase hello world" &rarr; `hello world`
@@ -111,10 +221,12 @@ sentence \<dgndictation> [over]
 word \<dgnwords>
  : "word hello" &rarr; `hello`
 
-> **Go Practice!**
-Practice outputting some text. Keep notes on which words or phrases don't work as expected so you can tune later.
-{: notice}
+## Using Dragon Mode
+Another option is to switch to `dragon mode` using the "dragon mode" command in [speech_toggle.py](https://github.com/2shea/talon_configs/blob/master/speech_toggle.py), which puts Talon in a sleeping state and wakes up Dragon for you to use Dragon directly. Some users who are familiar with Dragon already or do a lot of prose dictation might prefer this approach.
 
+**Go Practice!**
+Practice outputting some text. Keep notes on which words or phrases don't work as expected so you can tune later.
+{: .notice}
 
 # Formatters
 Example from [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py).
@@ -144,25 +256,30 @@ The built-in microphone on your mac is not going to give you the kind of accurac
 
 1. [Blue Yeti](https://smile.amazon.com/Blue-Yeti-USB-Microphone-Silver/dp/B002VA464S?sa-no-redirect=1) - great mic (especially for the price) if you don't have background noise
 1. [Stenomask](https://talktech.com/product/steno-sr-pro-1/) - great for dealing with background noise, cheapest model probably also fine
-1. [DPA d:fine cardioid](https://www.sweetwater.com/store/detail/4288ESBg--dpa-dfine-core-4288-omnidirectional-flex-earset-microphone-with-microdot-connector-long-length-be) - the best, but expensive
+1. [Audio-Technica Pro 8HEx](https://www.audio-technica.com/cms/wired_mics/94a69a7f0cbde4b3/index.html) - basic cardioid XLR microphone
+1. [DPA d:fine cardioid](https://www.sweetwater.com/store/detail/4288ESBg--dpa-dfine-core-4288-omnidirectional-flex-earset-microphone-with-microdot-connector-long-length-be) - (4188 or 4288) the best, but expensive
 
+Join #hardware in [Talon Slack][] for more suggestions.
 
 ## Find a Quiet Space
-Talking to your computer can feel awkward at first, and you might be self-conscious as you get used to hearing your own voice as you work. Find a quiet space where you feel comfortable talking at a normal volume and not be distracted by what other people think. Also, it's important that background noise will be at a minimum so it doesn't interfere with your accuracy.
+Talking to your computer can feel awkward at first, and you might be self-conscious as you get used to hearing your own voice as you work. Find a quiet space where you feel comfortable talking at a normal volume and not be distracted by what other people think. Also, it's important to minimize background noise so that it doesn't interfere with your accuracy. Some microphones are better about handling background noise. If finding a quiet space isn't an option, find a microphone that will be best for this environment.
+
+## Focus on Biggest Wins First, then Expand
+The bulk of my typing work happens in the text editor, so I focused on getting efficient there first. I spent a week or two building my own module for Sublime Text (there wasn't one when I first started), and practiced writing, editing, and navigating code. I paid attention to when I reached for a keyboard while working on some code, for example, running a test in terminal, or googling something. I tried to learn to use those by voice next. My goal was to get longer and longer blocks of time where I didn't need to touch a keyboard or mouse at all. It takes a while to chip away at all of the technology you touch on a day-to-day, but it adds up and eventually pays off. I have days now where I don't need to touch the keyboard at all!
 
 ## Copy Some Code
-Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets from my codebase that were a good representation of what I work on, and tried to reproduced exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my Talon libraries and learn new commands.
+Learning a new input method requires a lot of mental bandwidth. When I first started, it was helpful to practice reproducing already existing code rather than jump right into writing new code. I picked a few snippets from my codebase that were a good representation of what I work on, and tried to reproduced them exactly. I took notes on what felt inefficient or where I experienced inaccuracies so I could later iterate on my Talon libraries, learn new commands, then try to reproduce the same code again.
 
 ## Use Simple Tasks for More Practice
 Once you are feeling confident enough with copying code, try tackling simple tasks. The first few weeks of learning, my team was really supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
 
 ## Use Your Talon Library as Dogfood
-Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning.
+Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning. It's pretty great to get some opportunity to practice but also build new things that you can immediately benefit from.
 
-## Did I Mention Talon Slack?
-Talon's Slack community can be a really great resource. If you have questions or are thinking about building a new tool, jump into Slack and say Hi! There's a good chance someone has already written the thing you need, or we can help answer questions when you get stuck.
+## Leverage Talon's Community
+Talon's Slack community can be a really great resource. In my experience, Talon folks have been very friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
 
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
 [Talon Community repository]: https://github.com/dwiel/talon_community
-[my Talon libraries]: https://github.com/2shea/talon_configs
+[my Talon Configs]: https://github.com/2shea/talon_configs
 [my Talon help.py]: https://github.com/2shea/talon_configs/blob/master/help.py
