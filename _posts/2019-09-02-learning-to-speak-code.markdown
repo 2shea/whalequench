@@ -47,6 +47,8 @@ context.keymap({
 ```
 Commands can also be mapped to python functions for more advanced functionality, which is not covered in this post.
 
+If you are making customizations and wondering the syntax to specify keys in your commands, see the [Key List](https://github.com/dwighthouse/unofficial-talonvoice-docs/blob/master/docs/KeysList.md).
+
 # Basic Input
 ## The Alphabet
 Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
