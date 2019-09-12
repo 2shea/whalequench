@@ -71,9 +71,17 @@ textarea:focus {
 
 .pagination li a.current,
 .pagination li a.current.disabled {
-    background: #ed1843
+    background: #ed1843;
 }
 
 .greedy-nav .visible-links a:before {
     background: #ed1843;
+}
+
+.page__footer-follow a {
+    color: white;
+}
+
+.page__footer-follow a:hover {
+    color: #ed1843;
 }

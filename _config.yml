@@ -47,6 +47,13 @@ defaults:
       author_profile: true
       read_time: true
 
+footer:
+  links:
+    - label: "Credit: logo artist @elisabethnicula"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/elisabethnicula"
+
+
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.16.6"
