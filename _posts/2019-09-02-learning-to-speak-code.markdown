@@ -284,7 +284,7 @@ Implementing new functionality in your voice toolset can be a great way to dogfo
 Talon's Slack community can be a fantastic resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
 
 ## Feedback
-If you have feedback on this post, please reach out. You can contact me on twitter as [@yomilly](https://twitter.com/yomilly?lang=en) or in [Talon Slack][] as @2shea. Thanks! 🐳🥤
+If you have feedback on this post or have content requests, please reach out. You can contact me on twitter as [@yomilly](https://twitter.com/yomilly?lang=en) or in [Talon Slack][] as @2shea. Thanks! 🐳🥤
 
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
 [Talon Community repository]: https://github.com/dwiel/talon_community
