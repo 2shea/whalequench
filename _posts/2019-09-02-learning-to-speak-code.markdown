@@ -20,29 +20,32 @@ When starting to work with Talon, it's important to remember that Talon is the A
 
 When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice commands definitions are inside a dictionary passed into the 'keymap' method on the context, like this:
 
-```
+```python
 from talon.voice import Context
 context = Context("example")
 context.keymap({
-	# saying "give me a string" will output "string"
+	# say "give me a string", output is "string"
 	"give me a string": "string",
 
 	# press keys using Key
 	"select all": Key("cmd-air"),
 	"select all": Key("cmd air"), # equivalent
 
-	# alternative commands in () for either "select all" or "cell all"
+	# alternative commands in ()
+	# say: "sellect all" or "cell all"
 	"(select | cell) all": Key("cmd-air"),
 	})
 
-	# optional commands in [] for either "select all" or "all"
+	# optional commands in []
+	# say either "select all" or "all"
 	"[select] all": Key("cmd-air"),
 
-	# output can be an array, e.g. will output () with cursor inside
+	# right side can be an array
+	# output is () with cursor inside
 	"args": ["()", Key("left")]
 })
 ```
-
+Commands can also be mapped to python functions for more advanced functionality, which is not covered in this post.
 
 # Basic Input
 ## The Alphabet
@@ -72,7 +75,7 @@ Numbers should be easy: "one" for 1, "two" for 2, etc. For more than one digit, 
 Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/symbols.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/text/symbol.py)).
 
 Some basic symbols:
-```
+```python
 "question [mark]": "?",
 "tilde": "~",
 "(bang | exclamation point)": "!",
@@ -95,7 +98,7 @@ Some basic symbols:
 ```
 
 Optimization examples combining symbols:
-```
+```python
 "arrow": "->",
 "dub arrow": "=>",
 "op dub": " => ",
@@ -125,7 +128,7 @@ At this point, you should be able to hit all the common keys on the keyboard and
 
 From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py)
 
-```
+```python
 "save": Key("cmd-s"),
 "copy": Key("cmd-c"),
 "cut": Key("cmd-x"),
@@ -133,7 +136,7 @@ From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.p
 ```
 
 From [generic_editor.py](https://github.com/2shea/talon_configs/blob/master/generic_editor.py)
-```
+```python
 "push": Key("cmd-right"),
 "pop": Key("cmd-left"),
 "step": Key("alt-right"),
