@@ -182,12 +182,9 @@ Voice coding requires learning a library of commands to be efficient (typing eve
 
 Voice commands are grouped to context, for example "sublime", "git", "google_chrome", etc. You will find that most Talon modules have one context name, and some have logic to restrict the context's active state based on some logic, like when an application has focus (e.g., "sublime" context active when Sublime Text has focus) or when working within a file with a specific file extension (e.g., "python" context active for .py extension). The help pop-ups described below will show information on the contexts loaded into Talon and the commands for that context group.
 
-The new Talon beta API structure does not have a concept of contexts.
-{: .notice--danger}
-
 ## All Contexts
 **"help context"**
-This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context is active only when sublime is in focus). From here, you can say "help 1", "help /<context name>", (or click with the mouse) to show commands for that specific context.
+This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context is active if sublime is in focus). From here, you can say "help 1", "help /<context name>", (or click with the mouse) to show commands for that specific context.
 
 ![help context](/assets/help_context.png)
 
@@ -279,7 +276,7 @@ Learning a new input method requires a lot of mental bandwidth. When I first sta
 Once you are feeling confident enough with copying code, try tackling simple tasks. The first 8 weeks of learning, my team was supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
 
 ## Use Your Talon Library as Dogfood
-Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning. It's pretty great to get some opportunity to practice but also build new things that you can immediately benefit from.
+Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I often found that new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning. It's pretty great to get some opportunity to practice but also build new things to improve your workflow.
 
 ## Leverage Talon's Community
 Talon's Slack community can be a fantastic resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
