@@ -1,0 +1,79 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// overrides
+.toc .nav__title {
+    background: #ed1843;
+ }
+
+ .search__toggle {
+    color: #ed1843;
+}
+
+.archive__item-title .ais-Highlight {
+    color: #ed1843;
+}
+
+.archive__item-excerpt .ais-Highlight {
+    color: #ed1843;
+}
+
+.navicon {
+    background: #ed1843;
+}
+
+.navicon:before,
+.navicon:after {
+    background: #ed1843;
+}
+
+a:visited,
+a {
+    color: #ed1842;
+}
+
+a:hover {
+    color: black;
+}
+
+a:focus,
+button:focus {
+    outline: thin dotted #ed1843;
+    outline: 5px auto #ed1842;
+}
+
+blockquote {
+    border-left: 0.25em solid #ed1843
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ed1843;
+}
+
+.btn--primary {
+    background-color: #ed1843;
+}
+
+.btn--primary:visited {
+    background-color: #ed1843;
+}
+
+.notice--primary a {
+    color: #ed1843
+}
+
+.pagination li a.current,
+.pagination li a.current.disabled {
+    background: #ed1843
+}
+
+.greedy-nav .visible-links a:before {
+    background: #ed1843;
+}
