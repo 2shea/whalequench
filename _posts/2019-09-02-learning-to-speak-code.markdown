@@ -18,7 +18,7 @@ _Talon is under rapid development, so these examples may change._
 
 When starting to work with Talon, it's important to remember that Talon is the API ([what is an API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f)) that allows building hands-free functionality using Python. All the examples you will see in this post are implementations using Talon's API; they do not come with Talon by default. You can find all the code for the examples in this post either in [my Talon Configs] or [Talon Community Repository]. Saving them to `~/.talon/user` will load them into Talon and they will be automatically ready to use. Because all the functionality lives in a collection of Python files, everything is highly customizable to your workflow and preferences. Learning to voice code will be about learning to use functionality already implemented by others while making customizations to fit your unique workflow.
 
-When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice commands definitions are inside a dictionary passed into the 'keymap' function on the context, like this:
+When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice commands definitions are inside a dictionary passed into the 'keymap' method on the context, like this:
 
 ```
 from talon.voice import Context
