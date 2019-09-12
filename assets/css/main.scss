@@ -33,10 +33,19 @@
     background: #ed1843;
 }
 
+a:visited,
+a {
+    color: #ed1842;
+}
+
+a:hover {
+    color: black;
+}
+
 a:focus,
 button:focus {
     outline: thin dotted #ed1843;
-    outline: 5px auto #ed1843;
+    outline: 5px auto #ed1842;
 }
 
 blockquote {
