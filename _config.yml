@@ -29,7 +29,7 @@ paginate: 5
 author:
   name: "Emily Shea"
   avatar: "/assets/headshot.jpg"
-  bio: "Because of chronic [RSI](https://en.wikipedia.org/wiki/Repetitive_strain_injury), I use speech as my main input method when using a computer. I work professionally as a software engineer at Fastly. Previously to Fastly, I attended UC Berkeley and studied Architecture, worked in the mobile gaming space as an HR Manager, and attended App Academy."
+  bio: "Because of chronic [RSI](https://en.wikipedia.org/wiki/Repetitive_strain_injury), I use speech as my main input method when using a computer. I work professionally as a software engineer at Fastly. Previous to Fastly, I attended UC Berkeley and studied Architecture, worked in the mobile gaming space as an HR Manager, and attended App Academy."
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
