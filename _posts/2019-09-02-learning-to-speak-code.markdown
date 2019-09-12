@@ -121,7 +121,8 @@ You can reference most modifiers using their key name, e.g. "control" for Contro
 
 At this point, you should be able to hit all the common keys on the keyboard and have access to significant functionality on your computer using these keys and keyboard shortcuts. A majority of the commands I have in my Talon libraries are just easier to remember shorthands for using keyboard shortcuts. It's worth spending time familiarizing yourself with available keyboard shortcuts in your favorite applications and later making voice commands where it improves your workflow.
 
-**Examples of voice commands for keyboard shortcuts:**
+**Examples voice commands for keyboard shortcuts:**
+
 From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py)
 
 ```
@@ -176,7 +177,7 @@ Example from [help.py](https://github.com/2shea/talon_configs/blob/master/help.p
 
 Voice coding requires learning a library of commands to be efficient (typing everything out by individual key would be slow). It isn't realistic to think that you will memorize every possible command, especially if you are continuously iterating on your commands like I do. Because context switching is taxing, using tools to efficiently reference the set of available commands will help maintain the "flow" of coding and have a good quality of work life overall. I noticed an improvement in my own "flow" after I built some command help pop-ups and no longer needed to open up my text editor to reference my commands. These help pop-ups are accessible by voice commands. The voice command (what you say) will appear on the left and output on the right.
 
-Voice commands are grouped by context, for example "sublime", "git", "google_chrome", etc. You will find that most Talon modules have one context name, and some have logic to restrict the context's active state based on some logic, like when an application has focus (e.g., "sublime" context active when Sublime Text has focus) or when working within a file with a specific file extension (e.g., "python" context active for .py extension). The help pop-ups described below will show information on the contexts loaded into Talon and the commands for that context group.
+Voice commands are grouped to context, for example "sublime", "git", "google_chrome", etc. You will find that most Talon modules have one context name, and some have logic to restrict the context's active state based on some logic, like when an application has focus (e.g., "sublime" context active when Sublime Text has focus) or when working within a file with a specific file extension (e.g., "python" context active for .py extension). The help pop-ups described below will show information on the contexts loaded into Talon and the commands for that context group.
 
 The new Talon beta API is structured differently and does not have a concept of contexts.
 {: .notice--danger}
