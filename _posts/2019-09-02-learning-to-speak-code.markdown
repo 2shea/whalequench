@@ -184,7 +184,7 @@ The new Talon beta API structure does not have a concept of contexts.
 
 ## All Contexts
 **"help context"**
-This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context is only active when sublime is in focus). From here, you can say "help 1", "help /<context name>", (or click with the mouse) to show commands for that specific context.
+This pop-up will show all the contexts Talon has loaded, with inactive contexts faded out. Switching the focus to a different application may change which contexts are active (e.g., Sublime Text context is active only when sublime is in focus). From here, you can say "help 1", "help /<context name>", (or click with the mouse) to show commands for that specific context.
 
 ![help context](/assets/help_context.png)
 
@@ -250,11 +250,11 @@ When writing code, words often need to be formatted, e.g. snake_case, camelCase,
  : "allcaps smash hello world" &rarr; `HELLOWORLD`
  : "allcaps smash dubstring hello world" &rarr; `"HELLOWORLD"`
 
-As you can see by the last few examples, formatters can be combined.
+As you can see by the last examples, formatters can be combined.
 
 # General Tips
 ## Microphone Quality Matters
-The built-in microphone on your mac is not going to give you the kind of accuracy that you want, so find yourself a good one. A few microphones that are popular in the voice coding community:
+The built-in microphone on your mac is not going to give you the kind of accuracy that you want, so find yourself a good one. Suggested microphones that are popular in the voice coding community:
 
 1. [Blue Yeti](https://smile.amazon.com/Blue-Yeti-USB-Microphone-Silver/dp/B002VA464S?sa-no-redirect=1) - great mic for the price if you don't have background noise
 1. [Stenomask](https://talktech.com/product/steno-sr-pro-1/) - great for dealing with background noise, cheapest model probably also fine
@@ -267,19 +267,19 @@ Join #hardware in [Talon Slack][] for more suggestions.
 Talking to your computer can feel awkward at first, and you might be self-conscious as you get used to hearing your own voice as you work. Find a quiet space where you feel comfortable talking at a normal volume and not be distracted by what other people think. Also, it's important to minimize background noise so that it doesn't interfere with your accuracy. Some microphones are better about handling background noise. If finding a quiet space isn't an option, find a microphone that will be best for this environment.
 
 ## Focus on Biggest Wins First, then Expand
-The bulk of my typing work happens in the text editor, so I focused on getting efficient there first. I spent a week or two building my own module for Sublime Text (there wasn't one when I first started), and practiced writing, editing, and navigating code. I paid attention to when I reached for a keyboard while working on some code, for example, running a test in terminal, or googling something. I tried to learn to use those by voice next. My goal was to get longer and longer blocks of time where I didn't need to touch a keyboard or mouse at all. It takes a while to chip away at all the technology you touch on a day-to-day, but it adds up and eventually pays off. I have days now where I don't need to touch the keyboard at all!
+The bulk of my typing work happens in the text editor, so I focused on getting efficient there first. I spent a week or two building my own module for Sublime Text (there wasn't one when I first started), and practiced writing, editing, and navigating code. I paid attention to when I reached for a keyboard while working on some code, for example, running a test in terminal, or googling something. I tried to learn to use those by voice next. My goal was to get longer and longer blocks of time where I didn't need to touch a keyboard or mouse at all. It takes a while to chip away at all the technology you touch on a day-to-day, but it adds up and pays off. I have days now where I don't need to touch the keyboard at all!
 
 ## Copy Some Code
 Learning a new input method requires a lot of mental bandwidth. When I first started, I found it helpful to practice reproducing existing code rather than jump right into writing new code. I picked a snippet from my codebase that was a good representation of what I work on, and tried to reproduce an exact copy. I took notes on what felt inefficient and where I experienced inaccuracies so I could later iterate on my Talon libraries, learn new commands, then try to reproduce the same code again.
 
 ## Use Simple Tasks for More Practice
-Once you are feeling confident enough with copying code, try tackling simple tasks. The first few weeks of learning, my team was really supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
+Once you are feeling confident enough with copying code, try tackling simple tasks. The first 8 weeks of learning, my team was supportive of me taking on simple and not time sensitive tickets to help me with learning. I knew I'd still have a lot of mental overhead with remembering commands, so this wasn't a good time to tackle a difficult refactor or task requiring more than my text editor and a terminal shell.
 
 ## Use Your Talon Library as Dogfood
 Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I found that many new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning. It's pretty great to get some opportunity to practice but also build new things that you can immediately benefit from.
 
 ## Leverage Talon's Community
-Talon's Slack community can be a really great resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
+Talon's Slack community can be a fantastic resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
 
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
 [Talon Community repository]: https://github.com/dwiel/talon_community
