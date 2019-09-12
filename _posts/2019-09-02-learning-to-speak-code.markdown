@@ -18,7 +18,7 @@ _Talon is under rapid development, so these examples may change._
 
 When starting to work with Talon, it's important to remember that Talon is the API ([what is an API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f)) that allows building hands-free functionality using Python. All the examples you will see in this post are implementations using Talon's API; they do not come with Talon by default. You can find all the code for the examples in this post either in [my Talon Configs] or [Talon Community Repository]. Saving them to `~/.talon/user` will load them into Talon and they will be automatically ready to use. Because all the functionality lives in a collection of Python files, everything is highly customizable to your workflow and preferences. Learning to voice code will be about learning to use functionality already implemented by others while making customizations to fit your unique workflow.
 
-When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice commands definitions are inside a dictionary passed into the 'keymap' method on the context, like this:
+When looking at modules in [my Talon Configs][] or [Talon Community repository][], voice command definitions are inside a dictionary passed into the 'keymap' method on the context, like this:
 
 ```python
 from talon.voice import Context
@@ -126,7 +126,7 @@ You can reference most modifiers using their key name, e.g. "control" for Contro
 
 At this point, you should be able to hit all the common keys on the keyboard and have access to significant functionality on your computer using these keys and keyboard shortcuts. A majority of the commands I have in my Talon libraries are just easier to remember shorthands for using keyboard shortcuts. It's worth spending time familiarizing yourself with available keyboard shortcuts in your favorite applications and later making voice commands where it improves your workflow.
 
-**Examples voice commands for keyboard shortcuts:**
+**Example voice commands for keyboard shortcuts:**
 
 From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py)
 
@@ -159,6 +159,7 @@ Some examples:
 
 ## Multipliers
 Example from [help.py](https://github.com/2shea/talon_configs/blob/master/repeater.py).
+{: .notice--warning}
 It won't take you long to get frustrated if you are repeating yourself constantly. If you need to make an edit requires saying "delete" 20 times, you may give up or reach for a keyboard, so efficient repetition is important. Talon has a `Rep(n)` function that repeats the last command `n` number of times.
 
 Personally, it feels most natural to say the command first and specify the multiplier as a post-fix ("delete 5 times" vs. "5 times delete"). I often know _what_ I need to do first, and can decide _how many_ as I'm saying the first command. Because many commands might already be long, I want an efficient way to specify repeats. I can't use bare numbers, like "delete 5", because it's ambiguous whether that means "delete once, then the number 5" or "delete 5 times". I could use "once", "twice", "thrice", except it's not common knowlege to know what comes after "thrice", and I may want more than 3 repeats. One way is to make up a bunch of words for the repeats, but that requires inventing and learning a lot of new vocabulary.
@@ -167,7 +168,7 @@ My personal solution is to use the [ordinal number words](https://en.wikipedia.o
 
 
 "go down 4th"
- : arrow down 5 times
+ : arrow down 4 times
 
 "delete 10th"
  : delete 10 times 
@@ -268,7 +269,7 @@ Join #hardware in [Talon Slack][] for more suggestions.
 ## Find a Quiet Space
 Talking to your computer can feel awkward at first, and you might be self-conscious as you get used to hearing your own voice as you work. Find a quiet space where you feel comfortable talking at a normal volume and not be distracted by what other people think. Also, it's important to minimize background noise so that it doesn't interfere with your accuracy. Some microphones are better about handling background noise. If finding a quiet space isn't an option, find a microphone that will be best for this environment.
 
-## Focus on Biggest Wins First, then Expand
+## Focus on the Biggest Wins First, then Expand
 The bulk of my typing work happens in the text editor, so I focused on getting efficient there first. I spent a week or two building my own module for Sublime Text (there wasn't one when I first started), and practiced writing, editing, and navigating code. I paid attention to when I reached for a keyboard while working on some code, for example, running a test in terminal, or googling something. I tried to learn to use those by voice next. My goal was to get longer and longer blocks of time where I didn't need to touch a keyboard or mouse at all. It takes a while to chip away at all the technology you touch on a day-to-day, but it adds up and pays off. I have days now where I don't need to touch the keyboard at all!
 
 ## Copy Some Code
@@ -281,7 +282,7 @@ Once you are feeling confident enough with copying code, try tackling simple tas
 Implementing new functionality in your voice toolset can be a great way to dogfood your voice coding. I've written most of my libraries using voice, and I often found that new features I wanted were small enough in scope and simple enough to implement that they were great to work on while learning. It's pretty great to get some opportunity to practice but also build new things to improve your workflow.
 
 ## Leverage Talon's Community
-Talon's Slack community can be a fantastic resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like share the cool things we are building and help support each other.
+Talon's Slack community can be a fantastic resource. In my experience, Talon folks have been friendly, welcoming, and full of useful tips. If you have questions or an idea for building a new tool, jump into [Talon Slack][] and say "Hi"! There's a good chance someone may have already written the thing you need. If not, people will be happy to help answer questions and help you along. As the technology matures and more users come along, we like to share the cool things we are building and help support each other.
 
 ## Feedback
 If you have feedback on this post or have content requests, please reach out. You can contact me on twitter as [@yomilly](https://twitter.com/yomilly?lang=en) or in [Talon Slack][] as @2shea. Thanks! 🐳🥤
