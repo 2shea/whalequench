@@ -1,11 +1,11 @@
 ---
 layout: single
-title:  "Learning to Speak Code"
+title:  "Getting Started with Voice Driven Development"
 date:   2019-09-02 17:36:34 -0700
 categories: blog
 tags: talon
 toc: true
-excerpt: "A beginner's guide to learning voice coding with Talon."
+excerpt: "A beginner's guide to voice coding with Talon. Topics: Basic Input, Numbers, Symbols, Arrow Keys, Modifiers, Multipliers, Help, Words and Phrases, Formatters."
 
 ---
 You've decided to try using speech recognition to write code. You've installed all the things, you've got a decent microphone, and it's time to start talking to your computer, but where do you start? If you are feeling like "HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
