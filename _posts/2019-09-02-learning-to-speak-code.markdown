@@ -51,7 +51,7 @@ If you are making customizations and wondering the syntax to specify keys in you
 
 # Basic Input
 ## The Alphabet
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
+Example from [my Talon basic.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 
 Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and you will use them constantly (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a single letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
@@ -69,12 +69,12 @@ Spell some words using the alphabet. Spending some time upfront developing effic
 {: .notice}
 
 ## Numbers
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
+Example from [my Talon basic.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 Numbers should be easy: "one" for 1, "two" for 2, etc. For more than one digit, chain them, e.g., "one two five" for 125.
 
 ## Symbols
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/symbols.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/text/symbol.py)).
+Example from [my Talon symbols.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/text/symbol.py)).
 
 Some basic symbols:
 ```python
@@ -115,12 +115,12 @@ Get familiar with the commands for symbols. With most mapped to a straightforwar
 {: .notice}
 
 ## Arrow Keys
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
+Example from [my Talon basic.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 Arrow keys are important for basic navigation and keyboard shortcuts. You will use them frequently enough that the commands should be simple, but bare "up", "down", etc. will be unintentionally triggered often. I recommend using a prefix, for example "go up", "go down", "go left", etc. If you cloned the [my Talon Configs][] or the [Talon Community repository][], these already have the prefix "go".
 
 ## Modifiers
-Example from [basic.py](https://github.com/2shea/talon_configs/blob/master/basic.py) in [my Talon Configs][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
+Example from [my Talon basic.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 You can reference most modifiers using their key name, e.g. "control" for Control, "command" for Command. Because "shift" can be difficult to say, I recommend an alternative like "ship". Practice combining the modifier keys with the alphabet to use your favorite keyboard shortcuts.
 
@@ -128,7 +128,7 @@ At this point, you should be able to hit all the common keys on the keyboard and
 
 **Example voice commands for keyboard shortcuts:**
 
-From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py)
+From [my Talon standard.py][]
 
 ```python
 "save": Key("cmd-s"),
@@ -137,7 +137,7 @@ From [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.p
 "menu help": Key("cmd-shift-?")
 ```
 
-From [generic_editor.py](https://github.com/2shea/talon_configs/blob/master/generic_editor.py)
+From [my Talon generic_editor.py][]
 ```python
 "push": Key("cmd-right"),
 "pop": Key("cmd-left"),
@@ -158,7 +158,7 @@ Some examples:
 {: .notice}
 
 ## Multipliers
-Example from [help.py](https://github.com/2shea/talon_configs/blob/master/repeater.py).
+Example from [my Talon repeater.py][]
 {: .notice--warning}
 It won't take you long to get frustrated if you are repeating yourself constantly. If you need to make an edit requires saying "delete" 20 times, you may give up or reach for a keyboard, so efficient repetition is important. Talon has a `Rep(n)` function that repeats the last command `n` number of times.
 
@@ -178,7 +178,7 @@ My personal solution is to use the [ordinal number words](https://en.wikipedia.o
 
 
 # Command Help
-Example from [help.py](https://github.com/2shea/talon_configs/blob/master/help.py).
+Example from [my Talon help.py][]
 {: .notice--warning}
 
 Voice coding requires learning a library of commands to be efficient (typing everything out by individual key would be slow). It isn't realistic to think that you will memorize every possible command, especially if you are continuously iterating on your commands like I do. Because context switching is taxing, using tools to efficiently reference the set of available commands will help maintain the "flow" of coding and have a good quality of work life overall. I noticed an improvement in my own "flow" after I built some command help pop-ups and no longer needed to open up my text editor to reference my commands. These help pop-ups are accessible by voice commands. The voice command (what you say) will appear on the left and output on the right.
@@ -206,7 +206,7 @@ Navigate the help pop-ups using the above commands. To dismiss a pop-up, say (or
 {: .notice}
 
 # Words and Phrases
-Example from [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py).
+Example from [my Talon standard.py][]
 {: .notice--warning}
 
 ## Using Talon Mode
@@ -227,14 +227,14 @@ word \<dgnwords>
  : "word hello" &rarr; `hello`
 
 ## Using Dragon Mode
-Another option is to switch to `dragon mode` using the "dragon mode" command in [speech_toggle.py](https://github.com/2shea/talon_configs/blob/master/speech_toggle.py), which puts Talon in a sleeping state and wakes up Dragon for you to use Dragon directly. Some users who are familiar with Dragon already or do a lot of prose dictation might prefer this approach.
+Another option is to switch to `dragon mode` using the "dragon mode" command in [my Talon speech_toggle.py][], which puts Talon in a sleeping state and wakes up Dragon for you to use Dragon directly. Some users who are familiar with Dragon already or do a lot of prose dictation might prefer this approach.
 
 **Go Practice!**
 Practice outputting some text. Keep notes on which words or phrases don't work as expected so you can tune later.
 {: .notice}
 
 # Formatters
-Example from [standard.py](https://github.com/2shea/talon_configs/blob/master/standard.py).
+Example from [my Talon formatters.py][]
 When writing code, words often need to be formatted, e.g. snake_case, camelCase, etc. It's handy to have a set of text formatting commands which will capture a string of words then format the output.
 
 (dunder | camel | snake | kebab | pack | title | allcaps | dubstring | string)+ \<dgndictation> [over]
@@ -264,6 +264,8 @@ The built-in microphone on your mac is not going to give you the kind of accurac
 1. [Audio-Technica Pro 8HEx](https://www.audio-technica.com/cms/wired_mics/94a69a7f0cbde4b3/index.html) - basic cardioid XLR microphone
 1. [DPA d:fine cardioid](https://www.sweetwater.com/store/detail/4288ESBg--dpa-dfine-core-4288-omnidirectional-flex-earset-microphone-with-microdot-connector-long-length-be) - (4188 or 4288) the best, but expensive
 
+If you're unfamiliar with Stenomask, here's a [video demo](https://www.youtube.com/watch?v=T3WJubnhMEQ).
+
 Join #hardware in [Talon Slack][] for more suggestions.
 
 ## Find a Quiet Space
@@ -290,4 +292,11 @@ If you have feedback on this post or have content requests, please reach out. Yo
 [Talon Slack]: https://join.slack.com/t/talonvoice/shared_invite/enQtMjUzODA5NzQwNjYzLTY1NzZjNzM4NjVhZjZhYWFlNmZkYmU2YzE2ZjQxZjcyMTgwNDk5NDg2YzhmZDRmNmEwYThkODEyYjY4ZGZmODE
 [Talon Community repository]: https://github.com/dwiel/talon_community
 [my Talon Configs]: https://github.com/2shea/talon_configs
-[my Talon help.py]: https://github.com/2shea/talon_configs/blob/master/help.py
+[my Talon help.py]: https://github.com/2shea/talon_configs/blob/master/misc/help.py
+[my Talon symbols.py]: https://github.com/2shea/talon_configs/blob/master/text/symbols.py
+[my Talon basic.py]: https://github.com/2shea/talon_configs/blob/master/misc/basic.py
+[my Talon standard.py]: https://github.com/2shea/talon_configs/blob/master/misc/standard.py
+[my Talon generic_editor.py]: https://github.com/2shea/talon_configs/blob/master/text/generic_editor.py
+[my Talon repeater.py]: https://github.com/2shea/talon_configs/blob/master/misc/repeater.py
+[my Talon speech_toggle.py]: https://github.com/2shea/talon_configs/blob/master/misc/speech_toggle.py
+[my Talon formatters.py]: https://github.com/2shea/talon_configs/blob/master/text/formatters.py
