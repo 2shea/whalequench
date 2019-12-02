@@ -30,7 +30,7 @@ context.keymap({
 	# press keys using Key
 	"select all": Key("cmd-air"),
 	"select all": Key("cmd air"), # equivalent
-
+2
 	# alternative commands in ()
 	# say: "sellect all" or "cell all"
 	"(select | cell) all": Key("cmd-air"),
@@ -54,7 +54,7 @@ If you are making customizations and wondering the syntax to specify keys in you
 Example from Starter Pack [basic.py][] (equivalent in [Talon Community repository][] is [basic_keys.py](https://github.com/dwiel/talon_community/blob/master/misc/basic_keys.py)).
 {: .notice--warning}
 
-Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and you will use them constantly (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a single letter key. The alphabet is customizable, but I recommend using another voice coder's alphabet as a starting point rather than inventing your own from scratch. You can find one in the [Talon Community repository][], or start with mine:
+Learning the alphabet is a great place to start. It's a bite-size set of commands to learn, and you will use them constantly (spelling, keyboard shortcuts, vim, etc.) so it's important to have quick recall. The alphabet is a set of words where each word is a command for a single letter key. The alphabet is customizable, but I recommend using the alphabet in the [Talon Starter Pack][] as a starting point rather than inventing your own from scratch. This alphabet was designed by the Talon author, Ryan Hileman, to be efficient and phonetically diverse. Start here and only make modifications if you need to:
 
 ![alphabet commands](/assets/alphabet.png)
 
