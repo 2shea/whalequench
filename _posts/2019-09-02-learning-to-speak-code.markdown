@@ -10,10 +10,10 @@ excerpt: "A beginner's guide to voice coding with Talon. Topics: Basic Input, Nu
 ---
 You've decided to try using speech recognition to write code. You've installed all the things, you've got a decent microphone, and it's time to start talking to your computer, but where do you start? If you are feeling like "HOW DO I EVEN" with voice coding, I've compiled some learning strategies and tips to help you get started.
 
-This post assumes that you already have a working voice set up with both [Talon](https://talonvoice.com/) and Dragon Dictation installed and either [Talon Starter Pack][], [my Talon Configs][], or [Talon Community repository][] cloned into `~/.talon/user`. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
+This post assumes that you already have a working voice set up using the public release for macOS of [Talon](https://talonvoice.com/) (see below note about the beta), Dragon Dictation for macOS, and either (pick one) [Talon Starter Pack][], [my Talon Configs][], or [Talon Community repository][] cloned into `~/.talon/user`. If you need help with the set up, check out the [Talon docs](https://talonvoice.com/docs/index.html#document-index), join the [Talon Slack][], and check out [this video](https://www.youtube.com/watch?v=oB5TGMEhQp4&feature=youtu.be) house9Tube put together.
 {: .notice--info}
 
-_Talon is under rapid development, so these examples may change._
+_Talon is under rapid development, and there is a new beta API which is currently available to Talon's [Patreon subscribers](https://www.patreon.com/join/lunixbochs). Many of the concepts explained in this post will be the same in the beta, but the syntax in the examples is NOT compatible the new beta API. If you are using the beta, join the @beta Talon Slack channel and start with this repository [knausj_talon](https://github.com/knausj85/knausj_talon)._
 {: .notice--danger}
 
 When starting to work with Talon, it's important to remember that Talon is the API ([what is an API](https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f)) that allows building hands-free functionality using Python. All the examples you will see in this post are implementations using Talon's API; they do not come with Talon by default. You can find all the code for the examples in this post either in the [Talon Starter Pack] or [Talon Community Repository]. Saving them to `~/.talon/user` will load them into Talon and they will be automatically ready to use. Because all the functionality lives in a collection of Python files, everything is highly customizable to your workflow and preferences. Learning to voice code will be about learning to use functionality already implemented by others while making customizations to fit your unique workflow.
@@ -30,7 +30,7 @@ context.keymap({
 	# press keys using Key
 	"select all": Key("cmd-air"),
 	"select all": Key("cmd air"), # equivalent
-2
+
 	# alternative commands in ()
 	# say: "sellect all" or "cell all"
 	"(select | cell) all": Key("cmd-air"),
